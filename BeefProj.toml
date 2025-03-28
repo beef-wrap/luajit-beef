@@ -1,0 +1,10 @@
+FileVersion = 1
+
+[Project]
+Name = "luajit-beef"
+TargetType = "BeefLib"
+StartupObject = "luajit_beef.Program"
+
+[Configs.Debug.Win64]
+LibPaths = ["$(ProjectDir)\\libs\\release\\windows\\luajit.lib", "$(ProjectDir)\\libs\\release\\windows\\lua51.lib"]
+PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/libs/release/windows/*.dll\")"]
